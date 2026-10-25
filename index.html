@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="preload" as="image" href="instagram-07.jpg">
-  <link rel="stylesheet" href="music.css">
+  <link rel="stylesheet" href="music.css?v=20261025-mobile">
   <script src="app.js" defer></script>
   <script src="music.js" defer></script>
 </head>
@@ -74,7 +74,16 @@
         <div class="section-top"><p class="eyebrow">02 / DÊ O PLAY</p><span class="section-annotation">UM SOM. UM SENTIMENTO.</span></div>
         <div class="music-grid">
           <div class="music-art-wrap"><div class="music-art-border"><img src="instagram-07.jpg" width="362" height="640" loading="lazy" alt="Arte de divulgação da faixa Não te quero mais, de Ithalo Santori"></div><span class="music-art-note">NA VOZ DE ITHALO SANTORI</span></div>
-          <div class="music-copy"><span class="tag">FAIXA EM DESTAQUE</span><h2 id="music-title">NÃO TE<br>QUERO <span class="copper">MAIS.</span></h2><p class="music-artist">ITHALO SANTORI</p><p class="music-intro">Tem música que a gente ouve.<br>Tem música que a gente sente.</p><div class="music-actions"><a class="button button-copper" href="https://open.spotify.com/track/4Ohp9dATEgoFeDgeXwVLrb" target="_blank" rel="noopener noreferrer"><svg><use href="#spotify"/></svg> Ouvir no Spotify <svg><use href="#diagonal"/></svg></a><button id="listen-here" class="text-link" type="button" aria-expanded="true" aria-controls="music-dock"><svg><use href="#play"/></svg> Ouvir aqui</button></div><a class="channel-link" href="https://www.youtube.com/watch?v=saacnVY40EY" target="_blank" rel="noopener noreferrer"><svg><use href="#youtube"/></svg> Ver Não te quero mais no YouTube <svg><use href="#diagonal"/></svg></a></div>
+          <div class="music-copy"><span class="tag">FAIXA EM DESTAQUE</span><h2 id="music-title">NÃO TE<br>QUERO <span class="copper">MAIS.</span></h2><p class="music-artist">ITHALO SANTORI</p><p class="music-intro">Tem música que a gente ouve.<br>Tem música que a gente sente.</p><div class="music-actions"><a class="button button-copper" href="https://open.spotify.com/track/4Ohp9dATEgoFeDgeXwVLrb" target="_blank" rel="noopener noreferrer"><svg><use href="#spotify"/></svg> Ouvir no Spotify <svg><use href="#diagonal"/></svg></a><button id="listen-here" class="text-link" type="button" aria-expanded="true" aria-controls="music-dock"><svg><use href="#play"/></svg> Ouvir aqui</button></div><a class="channel-link" href="https://www.youtube.com/watch?v=saacnVY40EY" target="_blank" rel="noopener noreferrer"><svg><use href="#youtube"/></svg> Ver Não te quero mais no YouTube <svg><use href="#diagonal"/></svg></a>
+  <aside class="music-dock" id="music-dock" aria-label="Música do portfólio" data-state="loading">
+    <div class="music-dock-heading"><img src="instagram-07.jpg" alt="" width="36" height="36"><div><strong>Não te quero mais</strong><span>Ithalo Santori</span></div><button id="close-music" type="button" aria-label="Fechar player e parar a música">×</button></div>
+    <div id="music-video" class="music-video"></div>
+    <div class="music-dock-controls"><button id="toggle-music" type="button" disabled><svg aria-hidden="true"><use href="#play"/></svg><span>Carregando…</span></button><a href="https://www.youtube.com/watch?v=saacnVY40EY" target="_blank" rel="noopener noreferrer" aria-label="Ouvir Não te quero mais no YouTube"><svg><use href="#youtube"/></svg> YouTube</a></div>
+    <p id="music-status" class="music-status" role="status" aria-live="polite">Preparando a música…</p>
+    <noscript><a class="music-no-script" href="https://www.youtube.com/watch?v=saacnVY40EY" target="_blank" rel="noopener noreferrer">Ouvir a música no YouTube</a></noscript>
+  </aside>
+  <button class="music-launcher" id="open-music" type="button" aria-label="Tocar Não te quero mais" aria-controls="music-dock" aria-expanded="false" hidden><svg><use href="#play"/></svg><span>Tocar música</span></button>
+</div>
         </div>
       </div>
     </section>
@@ -98,14 +107,7 @@
 
   <footer class="footer"><div class="container footer-main"><a class="brand footer-brand" href="#inicio" aria-label="Voltar ao início"><span class="brand-mark">IS<span>.</span></span><span class="brand-name">ITHALO<br>SANTORI</span></a><span class="footer-line">MÚSICA QUE FICA. NOITES QUE MARCAM.</span><div class="footer-socials"><a href="https://www.instagram.com/ithalosantoricantor/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Ithalo Santori"><svg><use href="#instagram"/></svg></a><a href="https://open.spotify.com/track/4Ohp9dATEgoFeDgeXwVLrb" target="_blank" rel="noopener noreferrer" aria-label="Ouvir Ithalo Santori no Spotify"><svg><use href="#spotify"/></svg></a><a href="https://www.youtube.com/@ithalosantoricantor" target="_blank" rel="noopener noreferrer" aria-label="Canal de Ithalo Santori no YouTube"><svg><use href="#youtube"/></svg></a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Ithalo Santori · Portfólio artístico</span><button id="share-portfolio" type="button"><svg><use href="#share"/></svg> Compartilhar portfólio</button><a href="#inicio">Voltar ao topo ↑</a></div></footer>
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-  <aside class="music-dock" id="music-dock" aria-label="Música do portfólio" data-state="loading">
-    <div class="music-dock-heading"><img src="instagram-07.jpg" alt="" width="36" height="36"><div><strong>Não te quero mais</strong><span>Ithalo Santori</span></div><button id="close-music" type="button" aria-label="Fechar player e parar a música">×</button></div>
-    <div id="music-video" class="music-video"></div>
-    <div class="music-dock-controls"><button id="toggle-music" type="button" disabled><svg aria-hidden="true"><use href="#play"/></svg><span>Carregando…</span></button><a href="https://www.youtube.com/watch?v=saacnVY40EY" target="_blank" rel="noopener noreferrer" aria-label="Ouvir Não te quero mais no YouTube"><svg><use href="#youtube"/></svg> YouTube</a></div>
-    <p id="music-status" class="music-status" role="status" aria-live="polite">Preparando a música…</p>
-    <noscript><a class="music-no-script" href="https://www.youtube.com/watch?v=saacnVY40EY" target="_blank" rel="noopener noreferrer">Ouvir a música no YouTube</a></noscript>
-  </aside>
-  <button class="music-launcher" id="open-music" type="button" aria-label="Tocar Não te quero mais" aria-controls="music-dock" aria-expanded="false" hidden><svg><use href="#play"/></svg><span>Tocar música</span></button>
+
   <a class="mobile-booking" href="#contato"><span>SHOWS & EVENTOS</span> Fale com Ithalo <svg><use href="#diagonal"/></svg></a>
 </body>
 </html>
