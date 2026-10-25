@@ -21,5 +21,15 @@
 .music-launcher>svg{width:16px;height:16px;color:var(--copper)}
 .music-no-script{padding:12px;display:block;color:var(--copper);font-size:11px}
 body.menu-open .music-dock,body.menu-open .music-launcher{display:none}
-@media(max-width:620px){.music-dock{right:12px;bottom:calc(73px + env(safe-area-inset-bottom));width:min(300px,calc(100vw - 24px))}.music-launcher{right:12px;bottom:calc(73px + env(safe-area-inset-bottom))}.toast{bottom:120px}}
+/* Keep the video in the music section on phones and tablets, never over the page. */
+@media(max-width:900px){
+  .music-dock{position:static;inset:auto;width:100%;max-width:400px;margin:24px 0 0;z-index:auto;box-shadow:none}
+  .music-launcher{position:static;inset:auto;width:fit-content;max-width:100%;margin:24px 0 0;z-index:auto;box-shadow:none}
+  .music-dock-heading strong{font-size:13px}
+  .music-dock-heading span,.music-dock-controls>a{font-size:11px}
+  .music-dock-heading>button{width:44px;height:44px;flex-shrink:0}
+  .music-dock-controls>button{min-height:44px;font-size:12px}
+  .music-status{font-size:11px}
+}
+@media(max-width:620px){.toast{bottom:120px}}
 @media print{.music-dock,.music-launcher{display:none!important}}
